@@ -4,6 +4,7 @@ import themeing from './e-learmimg.jpg';
 function App() {
   const message = 'Hello, JSX!';
   const paragraph = 'hello, this is a paragraph rendered using JSX.';
+ 
 
   const PI = 3.14159;
   const description = `The value of PI is approximately ${PI}.`;
@@ -12,6 +13,17 @@ function App() {
   const welcome =(props) => {
     return <div>Welcome, {props.name}!</div>;
   }
+
+   const element = React.createElement( "button" ,
+    {
+      className:("btn"),
+      onClick:() => alert("Button clicked!")
+    },
+    "Click Me"
+  
+   );
+
+   
   
   return (
     <div>
@@ -21,8 +33,11 @@ function App() {
       <p>{paragraph}</p>
       <p>{description}</p>
       </welcome>
-      {theme}
+      {element}
+      {/* {theme} */}
    </div>
+
+
   
   );
 }
